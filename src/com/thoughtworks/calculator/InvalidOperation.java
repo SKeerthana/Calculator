@@ -1,8 +1,9 @@
 package com.thoughtworks.calculator;
 
-public class CancelOperation implements Operation{
+public class InvalidOperation implements Operation {
 
+    @Override
     public double computeResult(double accumulator) {
-        return 0;
+        return accumulator;
     }
 }

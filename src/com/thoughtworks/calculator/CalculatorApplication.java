@@ -9,15 +9,21 @@ public class CalculatorApplication {
         double accumulatedResult = 0;
 
         while(true) {
-            input = console.getInputFromUser();
-            if (!input.equals("exit")) {
-                Operation operation = interpreter.parseToGetOperation(input);
-                accumulatedResult = operation.computeResult(accumulatedResult);
-                console.displayOutput(accumulatedResult);
-            } else {
-                stop();
-            }
+            accumulatedResult = getInputFromUserAndDoProcessingToDisplayResult(console, interpreter, accumulatedResult);
         }
+    }
+
+    private double getInputFromUserAndDoProcessingToDisplayResult(Console console, Interpreter interpreter, double accumulatedResult) {
+        String input;
+        input = console.getInputFromUser();
+        if (!input.equals("exit")) {
+            Operation operation = interpreter.parseToGetOperation(input);
+            accumulatedResult = operation.computeResult(accumulatedResult);
+            console.displayOutput(accumulatedResult);
+        } else {
+            stop();
+        }
+        return accumulatedResult;
     }
 
     public void stop() {

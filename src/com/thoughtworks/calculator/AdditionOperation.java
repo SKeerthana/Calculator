@@ -1,15 +1,22 @@
 package com.thoughtworks.calculator;
 
 public class AdditionOperation implements Operation {
-    private int operand2;
+    private int operand;
 
-    public AdditionOperation(int operand2)
-    {
-        this.operand2 = operand2;
+    public AdditionOperation(int operand) {
+        this.operand = operand;
     }
 
     public double computeResult(double accumulator) {
-        operand2 += accumulator;
-        return operand2;
+        operand += accumulator;
+        return operand;
+    }
+
+    @Override
+    public boolean equals(Object that) {
+        if (!(that.getClass() == getClass()))
+            return false;
+        AdditionOperation thatAdditionOperation = (AdditionOperation) that;
+        return thatAdditionOperation.operand == operand;
     }
 }
