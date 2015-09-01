@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class InterpreterTest {
+
     @Test
     public void shouldParseAddCommandWhichCallAdditionOperationConstructor(){
         Interpreter interpreter=new Interpreter();
@@ -13,4 +14,11 @@ public class InterpreterTest {
         assertEquals(new AdditionOperation(5),operation);
     }
 
+    @Test
+    public void shouldParseAddCommandWhichCallSubtractionOperationConstructor(){
+        Interpreter interpreter=new Interpreter();
+        Operation operation=interpreter.parseToGetOperation("subtract 5");
+
+        assertEquals(new SubtractionOperation(5),operation);
+    }
 }
