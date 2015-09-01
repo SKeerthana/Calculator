@@ -1,12 +1,10 @@
 package com.thoughtworks.calculator;
 
-public class MultiplicationOperation extends Operation {
+public class MultiplicationOperation implements Operation {
+    private int operand2;
 
     public MultiplicationOperation(int operand2) {
         this.operand2 = operand2;
-    }
-
-    public MultiplicationOperation() {
     }
 
     public double computeResult(double accumulator) {

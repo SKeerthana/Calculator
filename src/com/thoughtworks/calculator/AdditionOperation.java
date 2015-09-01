@@ -1,6 +1,7 @@
 package com.thoughtworks.calculator;
 
-public class AdditionOperation extends Operation {
+public class AdditionOperation implements Operation {
+    private int operand2;
 
     public AdditionOperation(int operand2)
     {
