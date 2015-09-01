@@ -11,4 +11,12 @@ public class MultiplicationOperation implements Operation {
         accumulator *= operand;
         return accumulator;
     }
+
+    @Override
+    public boolean equals(Object that) {
+        if (!(that.getClass() == getClass()))
+            return false;
+        MultiplicationOperation thatMultiplicationOperation = (MultiplicationOperation) that;
+        return thatMultiplicationOperation.operand == operand;
+    }
 }

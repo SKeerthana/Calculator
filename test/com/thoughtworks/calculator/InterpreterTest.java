@@ -21,4 +21,13 @@ public class InterpreterTest {
 
         assertEquals(new SubtractionOperation(5),operation);
     }
+
+
+    @Test
+    public void shouldParseAddCommandWhichCallMultiplicationOperationConstructor(){
+        Interpreter interpreter=new Interpreter();
+        Operation operation=interpreter.parseToGetOperation("multiply 5");
+
+        assertEquals(new MultiplicationOperation(5),operation);
+    }
 }
