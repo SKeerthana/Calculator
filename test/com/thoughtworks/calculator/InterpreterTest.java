@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class InterpreterTest {
 
     @Test
-    public void shouldParseAddCommandWhichCallAdditionOperationConstructor() {
+    public void shouldParseAddCommandWhichCallsAdditionOperationConstructor() {
         Interpreter interpreter = new Interpreter();
         Operation operation = interpreter.parseToGetOperation("add 5");
 
@@ -15,7 +15,7 @@ public class InterpreterTest {
     }
 
     @Test
-    public void shouldParseAddCommandWhichCallSubtractionOperationConstructor() {
+    public void shouldParseSubtractCommandWhichCallsSubtractionOperationConstructor() {
         Interpreter interpreter = new Interpreter();
         Operation operation = interpreter.parseToGetOperation("subtract 5");
 
@@ -23,7 +23,7 @@ public class InterpreterTest {
     }
 
     @Test
-    public void shouldParseAddCommandWhichCallMultiplicationOperationConstructor() {
+    public void shouldParseMultiplyCommandWhichCallsMultiplicationOperationConstructor() {
         Interpreter interpreter = new Interpreter();
         Operation operation = interpreter.parseToGetOperation("multiply 5");
 
@@ -31,10 +31,18 @@ public class InterpreterTest {
     }
 
     @Test
-    public void shouldParseAddCommandWhichCallDivisionOperationConstructor() {
+    public void shouldParseDivisionCommandWhichCallsDivisionOperationConstructor() {
         Interpreter interpreter = new Interpreter();
         Operation operation = interpreter.parseToGetOperation("divide 5");
 
         assertEquals(new DivisionOperation(5), operation);
+    }
+
+    @Test
+    public void shouldParseCancelCommandWhichReturnsCancelOperationObject() {
+        Interpreter interpreter = new Interpreter();
+        Operation operation = interpreter.parseToGetOperation("cancel");
+
+        assertEquals(CancelOperation.class, operation.getClass());
     }
 }
