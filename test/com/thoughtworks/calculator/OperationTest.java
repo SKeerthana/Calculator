@@ -8,7 +8,7 @@ import static org.mockito.Mockito.*;
 public class OperationTest {
 
     @Test
-    public void shouldFailOnNullIdentifiers() {
+    public void shouldCallComputeResultFunction() {
         Operation test = mock(Operation.class);
         when(test.computeResult(0)).thenReturn(0.0);
         assertEquals(0, test.computeResult(0), 0);
