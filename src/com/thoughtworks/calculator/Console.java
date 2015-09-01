@@ -9,4 +9,9 @@ public class Console {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
+
+    public void displayOutput(Double output) {
+        System.out.println(output);
+    }
+
 }
