@@ -2,12 +2,12 @@ package com.thoughtworks.calculator;
 
 public class SubtractionOperation extends Operation{
 
-    public SubtractionOperation(double accumulator) {
-        this.accumulator = accumulator;
+    public SubtractionOperation(int operand2) {
+        this.operand2 = operand2;
     }
 
-    public double computeResult(int operand) {
-        accumulator -= operand;
+    public double computeResult(double accumulator) {
+        accumulator -= operand2;
         return accumulator;
     }
 }

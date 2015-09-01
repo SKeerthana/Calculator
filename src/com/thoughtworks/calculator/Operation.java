@@ -1,7 +1,7 @@
 package com.thoughtworks.calculator;
 
 public abstract class Operation {
-    protected double accumulator;
+    protected double operand2;
 
-    public abstract double computeResult(int operand);
+    public abstract double computeResult(double accumulator);
 }

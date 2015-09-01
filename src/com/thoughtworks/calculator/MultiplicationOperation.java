@@ -2,12 +2,15 @@ package com.thoughtworks.calculator;
 
 public class MultiplicationOperation extends Operation {
 
-    public MultiplicationOperation(double accumulator) {
-        this.accumulator = accumulator;
+    public MultiplicationOperation(int operand2) {
+        this.operand2 = operand2;
     }
 
-    public double computeResult(int operand) {
-        accumulator *= operand;
+    public MultiplicationOperation() {
+    }
+
+    public double computeResult(double accumulator) {
+        accumulator *= operand2;
         return accumulator;
     }
 }

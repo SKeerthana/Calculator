@@ -2,13 +2,16 @@ package com.thoughtworks.calculator;
 
 public class DivisionOperation extends Operation{
 
-    public DivisionOperation(double accumulator) {
-        this.accumulator = accumulator;
+    public DivisionOperation(double operand2) {
+        this.operand2 = operand2;
     }
 
-    public double computeResult(int operand) {
-        if (operand != 0)
-            accumulator /= operand;
+    public DivisionOperation() {
+    }
+
+    public double computeResult(double accumulator) {
+        if (operand2 != 0)
+            accumulator /= operand2;
         return accumulator;
     }
 }

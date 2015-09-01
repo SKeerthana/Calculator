@@ -8,11 +8,11 @@ public class SubtractionOperationTest {
 
     @Test
     public void shouldReturnValueFromComputeResult() {
-        assertEquals(-9, new SubtractionOperation(0.0).computeResult(9), 0);
+        assertEquals(9, new SubtractionOperation(0).computeResult(9), 0);
     }
 
     @Test
     public void shouldPerformSubtractionUsingPreInitiatedValueAndOperand() {
-        assertEquals(-4, new SubtractionOperation(5.0).computeResult(9), 0);
+        assertEquals(4, new SubtractionOperation(5).computeResult(9), 0);
     }
 }

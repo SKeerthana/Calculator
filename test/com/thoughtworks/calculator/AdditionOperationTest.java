@@ -8,11 +8,11 @@ public class AdditionOperationTest {
 
     @Test
     public void shouldReturnValueFromComputeResult() {
-        assertEquals(9, new AdditionOperation(0.0).computeResult(9), 0);
+        assertEquals(9, new AdditionOperation(0).computeResult(9), 0);
     }
 
     @Test
     public void shouldPerformAdditionUsingPreInitiatedValueAndOperand() {
-        assertEquals(14, new AdditionOperation(5.0).computeResult(9), 0);
+        assertEquals(14, new AdditionOperation(5).computeResult(9), 0);
     }
 }

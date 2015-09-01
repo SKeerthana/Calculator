@@ -8,11 +8,11 @@ public class MultiplicationOperationTest {
 
     @Test
     public void shouldReturnValueFromComputeResult() {
-        assertEquals(0, new MultiplicationOperation(0.0).computeResult(0), 0);
+        assertEquals(0, new MultiplicationOperation(0).computeResult(0), 0);
     }
 
     @Test
     public void shouldPerformMultiplicationUsingPreInitiatedValueAndOperand() {
-        assertEquals(10, new MultiplicationOperation(5.0).computeResult(2), 0);
+        assertEquals(10, new MultiplicationOperation(5).computeResult(2), 0);
     }
 }
