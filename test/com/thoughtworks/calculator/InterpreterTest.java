@@ -45,4 +45,11 @@ public class InterpreterTest {
 
         assertEquals(CancelOperation.class, operation.getClass());
     }
+    @Test
+    public void shouldReturnInvalidOperationWhenInvalidCommandIsGiven() {
+        Interpreter interpreter = new Interpreter();
+        Operation operation = interpreter.parseToGetOperation("hjsjhas");
+
+        assertEquals(InvalidOperation.class, operation.getClass());
+    }
 }
