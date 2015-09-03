@@ -26,6 +26,11 @@ public class Interpreter {
     }
 
     private boolean checkIfArgumentPassedIsInt(String operand) {
-        return true;
+        try {
+            Integer.parseInt(operand);
+            return true;
+        } catch (NumberFormatException ex) {
+            return false;
+        }
     }
 }
