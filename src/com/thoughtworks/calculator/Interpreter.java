@@ -18,7 +18,7 @@ public class Interpreter {
             }
         }
 
-        if (splitCommand.length == 1 && splitCommand[1].equals("cancel"))
+        if (splitCommand.length == 1 && splitCommand[0].equals("cancel"))
             return new CancelOperation();
 
         return new InvalidOperation();
