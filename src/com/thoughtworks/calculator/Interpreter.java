@@ -6,6 +6,7 @@ public class Interpreter {
 
         String[] splitCommand = command.split(" ");
         if (splitCommand.length == 2) {
+            boolean isValid = checkIfArgumentPassedIsInt(splitCommand[1]);
             switch (splitCommand[0]) {
                 case "add":
                     return new AdditionOperation(Integer.parseInt(splitCommand[1]));
@@ -22,5 +23,9 @@ public class Interpreter {
             return new CancelOperation();
 
         return new InvalidOperation();
+    }
+
+    private boolean checkIfArgumentPassedIsInt(String operand) {
+        return true;
     }
 }
